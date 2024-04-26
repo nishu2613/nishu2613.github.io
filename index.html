@@ -16,6 +16,18 @@
             text-align: left;
             outline: none;
             font-size: 15px;
+            position: relative;
+        }
+
+        .collapsible::after {
+            content: '\25B6'; /* Unicode character for right-pointing arrow */
+            position: absolute;
+            right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .active::after {
+            transform: rotate(90deg);
         }
 
         .content {
@@ -27,48 +39,102 @@
         }
 
         /* Style for profile image */
+        #profile-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
         #profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            margin-right: 20px;
         }
     </style>
 </head>
 <body>
 
-<h1>curriculum vitae
+<h1>Curriculum vitae
 </h1>
 
 <img src="download.jpg" alt="Profile Image" id="profile-image">
+<h2>NEELAM NISHANTH</h2>
 
-<button class="collapsible">Personal Information</button>
+<button class="collapsible">Summary</button>
 <div class="content">
-  <p>Personal Information Content</p>
+  <p>Enthusiastic biotechnology student with a fascination for bioinformatics, eager to integrate biology and computing with proficiency in Python programming. Seeking avenues to enhance skills in data analysis and programming, especially in Python. Excited to contribute to research or industry projects, leveraging biotech knowledge to tackle biology questions through computational approaches.
+</p>
 </div>
 
 <button class="collapsible">Education</button>
 <div class="content">
-  <p>Education Content</p>
+  <p><div>
+    <h2>Masters [pursuing]</h2>
+    <p>SRM University AP</p>
+    <p>Stream: Molecular biology and biotechnology</p>
 </div>
 
-<button class="collapsible">Work Experience</button>
-<div class="content">
-  <p>Work Experience Content</p>
+<div>
+    <h2>Bachelors of Science [2020 - 2023]</h2>
+    <p>Nethaji Degree College, VInjamoor</p>
+    <p>Stream: Botany, Zoology, Chemistry</p>
+    <p>Aggregate: 87%</p>
 </div>
 
-<button class="collapsible">Skills</button>
-<div class="content">
-  <p>Skills Content</p>
+<div>
+    <h2>Intermediate [2017 - 2019]</h2>
+    <p>Sri Chaitanya Narayana Jr. College, Nellore</p>
+    <p>Stream: BIPC</p>
+    <p>Aggregate: 93.9%</p>
 </div>
 
-<button class="collapsible">Projects</button>
+<div>
+    <h2>Board of Secondary Education</h2>
+    <p>Ravi High School, Vinjamoor, Nellore district</p>
+    <p>Board: Andhra Pradesh Board of Secondary Education</p>
+    <p>Aggregate: 92%</p>
+</div>
+</p>
+</div>
+
+<button class="collapsible">Technical skills</button>
 <div class="content">
-  <p>Projects Content</p>
+  <p>homology modeling</p>
+  <p>molecular docking</p>
+  <p>programming(python)</p>
+  <p>primer designing</p>
+</div>
+
+<button class="collapsible">Internships</button>
+<div class="content">
+  <p>Completed a six-month internship at BrainOvision Solution Pvt. Ltd., where I gained hands-on experience working with MERN stacks. 
+</p>
+  <p>Engaged in web development for two months during my internship at BrainOvision Solution Pvt. Ltd.
+</p>
+</div>
+
+<button class="collapsible">Certifications</button>
+<div class="content">
+  <p>
+    <img src="mernstack.jpg" alt="Profile Image" id="Certifications" width="600" height="800">
+    <img src="mernstack2.jpg" alt="Profile Image" id="Certifications" width="600" height="800">
+
+  </p>
+</div>
+
+<button class="collapsible">Hobbies</button>
+<div class="content">
+  <p>Playing Badminton</p>
+  <p>Dancing</p>
+  <p>Reading bookss</p>
 </div>
 
 <button class="collapsible">Contact Information</button>
 <div class="content">
-  <p>Contact Information Content</p>
+  <p>Address: vinjamoor, Nellore district, AP</p>
+  <p>G-mail address:  physicsgallaxy108@gmail.com</p>
+  <p>phone number: +91 7680998048</p>
 </div>
 
 <script>
