@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishanth curriculum vitae</title>
+    <style>
+        /* Style for collapsible sections */
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+
+        /* Style for profile image */
+        #profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<h1>curriculum vitae
+</h1>
+
+<img src="download.jpg" alt="Profile Image" id="profile-image">
+
+<button class="collapsible">Personal Information</button>
+<div class="content">
+  <p>Personal Information Content</p>
+</div>
+
+<button class="collapsible">Education</button>
+<div class="content">
+  <p>Education Content</p>
+</div>
+
+<button class="collapsible">Work Experience</button>
+<div class="content">
+  <p>Work Experience Content</p>
+</div>
+
+<button class="collapsible">Skills</button>
+<div class="content">
+  <p>Skills Content</p>
+</div>
+
+<button class="collapsible">Projects</button>
+<div class="content">
+  <p>Projects Content</p>
+</div>
+
+<button class="collapsible">Contact Information</button>
+<div class="content">
+  <p>Contact Information Content</p>
+</div>
+
+<script>
+    // JavaScript to toggle collapsible sections
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+    }
+</script>
+
+</body>
+</html>
